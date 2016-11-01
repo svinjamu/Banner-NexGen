@@ -1,0 +1,99 @@
+body{
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+}
+#nav_bar{
+    font-size: 25px;
+    color: white;
+    height: 80px;
+    background: rgb(153, 189, 47);
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+nav a {
+    padding-top: 30px !important;
+    padding-bottom: 20px !important;
+    font-size: 25px;
+}
+
+nav.navbar.shrink{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 15px;
+}
+
+nav {
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+nav.smaller {
+    height: 10px;
+}
+
+#main_body{
+    /*font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    animation: fade;
+    /*background: rgb(189, 116, 32);*/
+}
+#section1{
+   /* background-color: #cccccc;
+    height: 600px; */
+    padding-top: 80px;
+}
+.img-responsive{
+    width : 550px;
+    height : 600px;
+    margin-top: 70px;
+    /*margin-left: 20px;
+    transform: skew(7deg);*/
+}
+
+#log_image{
+    -webkit-filter: opacity(45%);
+    padding-left: 20px;
+}
+
+#EOD_transaction{
+    -webkit-filter: opacity(25%);
+}
+
+#id0,#id1,#id2{
+    background-color: rgb(153, 189, 47);
+}
+
+.glyphicon{
+    color: rgb(153, 189, 47);
+}
+
+.glyphicon-user{
+    color: white;
+}
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+    background-image: none;
+}
+
+.myCarousel {
+    background: rgba(0,0,0,0);
+}
+
+#row_pwd, #pwd_mgmt, #rep_row{
+    padding-top: 20px;
+    background-color: gainsboro;
+}
+
+.badge{
+    background-color: rgb(153, 189, 47);
+}
+
+.scroll{
+    background-color: black;
+}
