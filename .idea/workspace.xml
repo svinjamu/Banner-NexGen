@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86dff3c4-d97d-43d7-a58a-69a295a55f7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/banner-nexgen_home.css" afterPath="$PROJECT_DIR$/src/css/banner-nexgen_home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home-page.html" afterPath="$PROJECT_DIR$/src/home-page.html" />
     </list>
     <ignored path="Banner-NexGen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -741,12 +739,12 @@
       <workItem from="1476365216134" duration="4500000" />
       <workItem from="1478006539055" duration="5550000" />
       <workItem from="1478106426513" duration="780000" />
-      <workItem from="1478182353590" duration="9079000" />
+      <workItem from="1478182353590" duration="9878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146713000" />
+    <option name="totallyTimeSpent" value="147512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
