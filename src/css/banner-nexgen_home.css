@@ -3,39 +3,35 @@ body{
     position: relative;
 }
 #nav_bar{
-    font-size: 25px;
+
     color: white;
-    height: 80px;
+    height: 55px;
     background: rgb(153, 189, 47);
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -ms-transition: height 0.3s;
-    -o-transition: height 0.3s;
-    transition: height 0.3s;
 }
 
-nav a {
-    padding-top: 30px !important;
-    padding-bottom: 20px !important;
+.navbar li a .navbar .navbar-brand{
+    /* margin-top: 50px !important;
+     padding-bottom: 20px !important; */
     font-size: 25px;
 }
 
-nav.navbar.shrink{
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    font-size: 15px;
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: rgb(153, 189, 47) !important;
+    background-color: #fff !important;
 }
 
-nav {
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -ms-transition: height 0.3s;
-    -o-transition: height 0.3s;
-    transition: height 0.3s;
+li.active a {
+    height: 55px;
 }
 
-nav.smaller {
-    height: 10px;
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    background-color: rgb(153, 189, 47) !important;
+    /*background-color: rgb(153, 189, 47) !important; */
+}
+
+#myNavbar {
+    background-color:  rgb(153, 189, 47) !important ;
 }
 
 #main_body{
@@ -45,9 +41,9 @@ nav.smaller {
     /*background: rgb(189, 116, 32);*/
 }
 #section1{
-   /* background-color: #cccccc;
-    height: 600px; */
-    padding-top: 80px;
+    /* background-color: #cccccc;
+     height: 600px; */
+    padding-top: 20px;
 }
 .img-responsive{
     width : 550px;
