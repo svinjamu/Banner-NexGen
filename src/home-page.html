@@ -552,9 +552,10 @@
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
                                                 <label> <input type="radio" id="radio_sson" name="sson_radio_button"> &nbsp;
-                                                    <span id="sson_radio_label1"> https://test.www.nbspayments.com/qa/api/institution/v1/3CY40/signon/signonrequest </span>
+                                                    <span id="sson_radio_label1" style="overflow-wrap: break-word;"> https://test.www.nbspayments.com/qa/api/institution/v1/3CY40/signon/signonrequest </span>
                                                 </label> <br>
-                                                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="static" id="sson_edit_button">Edit</button> &nbsp;&nbsp;
+                                                &nbsp;&nbsp; <button type="button" class="btn btn-info btn-sm" data-backdrop="static" id="sson_add_button">Add</button> &nbsp;&nbsp;
+                                                <button type="button" class="btn btn-info btn-sm"  data-backdrop="static" id="sson_edit_button">Edit</button> &nbsp;&nbsp;
                                                 <button type="reset" class="btn btn-danger btn-sm" id="sson_reset_button">Reset</button> <br>
                                             </div>
                                         </form>
@@ -566,7 +567,7 @@
                                         <button type="button" class="btn btn-info btn-sm" data-target="#myModal" data-toggle="modal" data-backdrop="static">Edit</button> &nbsp;&nbsp;
                                         <button type="submit" class="btn btn-danger btn-sm">Delete</button> <br> -->
 
-                                        <!-- Code to open modal like dialog box after clicking edit -->
+                                        <!-- Code to open modal like dialog box after clicking edit/add -->
                                         <div class="modal fade" id="sson_edit_modal" role="dialog">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
@@ -591,7 +592,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="col-sm-2 control-label">Enterprise URL</label>
                                                                                 <div class="col-sm-10">
-                                                                                    <input class="form-control" id="sson_config_ent_url" type="text" disabled>
+                                                                                    <input class="form-control" id="sson_config_ent_url" type="text">
                                                                                 </div>
                                                                             </div>
                                                                         </form>
@@ -912,24 +913,26 @@
                                 </div>
                                 <div id="spac_body" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: gainsboro;">
-                                        <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
-                                            CASHIERING STUDENT ACCT TEMPLATE
-                                        </label> <br>
+                                        <form class="form-horizontal" role="form">
+                                            <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
+                                                CASHIERING STUDENT ACCT TEMPLATE
+                                            </label> <br>
 
-                                        <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
-                                            CASHIERING
-                                        </label>  <br>
+                                            <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
+                                                CASHIERING
+                                            </label>  <br>
 
-                                        <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
-                                            STUDENT ACCOUNT
-                                        </label>
+                                            <label><input type="radio" name="stud_acc_payment_radiobutton"> &nbsp;
+                                                STUDENT ACCOUNT
+                                            </label>
 
-                                        <br> <br>
-                                        <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_edit" onclick="validator()" data-toggle="modal" data-backdrop="static">Edit</button> &nbsp;&nbsp;
-                                        <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_add" >Add</button> &nbsp;&nbsp;
-                                        <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_copy" >Copy</button> &nbsp;&nbsp;
-                                        <button type="submit" class="btn btn-danger btn-sm" id="stud_acc_payment_delete">Delete</button> <br>
-
+                                            <br> <br>
+                                            <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_edit" name="sapc_button">Edit</button> &nbsp;&nbsp;
+                                            <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_add" name="sapc_button" data-backdrop="static" data-toggle="modal" data-target="#spac_modal">Add</button> &nbsp;&nbsp;
+                                            <button type="submit" class="btn btn-info btn-sm" id="stud_acc_payment_copy" name="sapc_button">Copy</button> &nbsp;&nbsp;
+                                            <button type="reset" class="btn btn-danger btn-sm" id="stud_acc_payment_reset" name="sapc_button">Reset</button> &nbsp;&nbsp;
+                                            <button type="submit" class="btn btn-danger btn-sm" id="stud_acc_payment_delete" name="sapc_button">Delete</button> <br>
+                                        </form>
                                         <!-- Start of Modal SAPC -->
                                         <div class="modal fade" id="spac_modal" role="dialog">
                                             <div class="modal-dialog modal-lg">
@@ -941,323 +944,74 @@
                                                     <div class="modal-body">
                                                         <!-- panel group to group all items in modal -->
                                                         <div class="panel-group" id="sapc_modal_panel_group">
+                                                            <!-- start of configuration key -->
                                                             <div class="panel">
                                                                 <!-- Configuration URL -->
                                                                 <div class="panel-heading">
                                                                     <h4 class="panel-title">
-                                                                        <a data-toggle="collapse" data-parent="#sson_modal_panel_group" data-target="#sson_modal_configkey" style="text-decoration: none; cursor: pointer;">Configuration Key</a>
+                                                                        <a data-toggle="collapse" data-parent="#sapc_modal_panel_group" data-target="#sapc_modal_configkey" style="text-decoration: none; cursor: pointer;">Configuration Key</a>
                                                                     </h4>
                                                                 </div>
                                                                 <!-- body of the above panel -->
-                                                                <div id="sson_modal_configkey" class="panel-collapse collapse">
+                                                                <div id="sapc_modal_configkey" class="panel-collapse collapse">
                                                                     <div class="panel-body" style="background-color: gainsboro;">
                                                                         <form class="form-horizontal" role="form">
                                                                             <div class="form-group">
-                                                                                <label class="col-sm-2 control-label">Enterprise URL</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input class="form-control" id="sson_config_ent_url" type="text" disabled>
+                                                                                <label class="col-sm-3 control-label">Order Type</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input class="form-control" id="sapc_config_ord_type" type="text">
                                                                                 </div>
                                                                             </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <!-- end of configuration key -->
+
+                                                            <!-- start of Miscellaneous configuration -->
                                                             <div class="panel">
                                                                 <!-- Single sign on options -->
                                                                 <div class="panel-heading">
                                                                     <h4 class="panel-title">
-                                                                        <a data-toggle="collapse" data-parent="#sson_modal_panel_group" data-target="#sson_modal_options" style="text-decoration: none; cursor: pointer;">Single Signon Options</a>
+                                                                        <a data-toggle="collapse" data-parent="#sapc_modal_panel_group" data-target="#sapc_modal_misconfgurations" style="text-decoration: none; cursor: pointer;">
+                                                                            Miscellaneous Configuration</a>
                                                                     </h4>
                                                                 </div>
                                                                 <!-- body of the above panel -->
-                                                                <div id="sson_modal_options" class="panel-collapse collapse">
+                                                                <div id="sapc_modal_misconfgurations" class="panel-collapse collapse">
                                                                     <div class="panel-body" style="background-color: gainsboro;">
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Customer Node</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Customer ID</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
 
                                                                         <form class="form-horizontal" role="form">
                                                                             <div class="form-group">
-                                                                                <label class="col-sm-3">Allow First Name</label>
+                                                                                <label class="col-sm-3 control-label">Descriptions</label>
                                                                                 <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
+                                                                                    <input class="form-control" id="sapc_misconfig_desc" type="text">
+                                                                                </div>
+                                                                                <br> <br>
+                                                                                <label class="col-sm-3 control-label">Custom RTPN Process</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <label><input type="radio" name="sapc_cust_rtpn_radio" required>  Yes </label> &nbsp;&nbsp;
+                                                                                    <label><input type="radio" name="sapc_cust_rtpn_radio" required> No </label>
                                                                                 </div>
                                                                             </div>
                                                                         </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Middle Name</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Last Name</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Characteristics</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Term Balance</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Term Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Students List</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Allow Transactions List</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Term Balance Only</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <label><input type="radio" name="optradio" required>  Yes </label> &nbsp;&nbsp;
-                                                                                    <label><input type="radio" name="optradio" required> No </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">View Email Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <select class="col-sm-6" >
-                                                                                        <option value="" selected>--Select--</option>
-                                                                                        <option value="CAMP" >CAMP - Campus</option>
-                                                                                        <option value="HO" >HO - Perm</option>
-                                                                                        <option value="LO" >LO - Local </option>
-                                                                                        <option value="PERS" >PERS - Personal</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Address Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <select class="col-sm-6" >
-                                                                                        <option value="" >--Select--</option>
-                                                                                        <option value="BI" >BI - Billing</option>
-                                                                                        <option value="BU" >BU - Business</option>
-                                                                                        <option value="EM" >EM - Emergency Contact</option>
-                                                                                        <option value="FA" >FA - Firm Address</option>
-                                                                                        <option value="HQ" >HQ - Corporate Headquarters</option>
-                                                                                        <option value="MA">MA - Mailing</option>
-                                                                                        <option value="MG" >MG - Matching Gift Address</option>
-                                                                                        <option value="P1" >P1 - Parent 1</option>
-                                                                                        <option value="P2" >P2 - Parent 2</option>
-                                                                                        <option value="P3" >P3 - Parent 3</option>
-                                                                                        <option value="P4" >P4 - Parent 4</option>
-                                                                                        <option value="PA" >PA - Parents</option>
-                                                                                        <option value="PR" >PR - Permanent</option>
-                                                                                        <option value="RH" >RH - Residence Hall</option>
-                                                                                        <option value="SB" >SB - Corporate Subsidiary</option>
-                                                                                        <option value="SC" >SC - School Campus</option>
-                                                                                        <option value="SE" >SE - Seasonal</option>
-                                                                                        <option value="TE" >TE - Temporary</option>
-                                                                                        <option value="XX" >XX - Reserved for TGRFEED Use Only</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Daytime Phone Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <select class="col-sm-6" >
-                                                                                        <option value="" >--Select--</option>
-                                                                                        <option value="BI" >BI - Billing</option>
-                                                                                        <option value="BU" >BU - Business</option>
-                                                                                        <option value="EM" >EM - Emergency Contact</option>
-                                                                                        <option value="FA" >FA - Firm Address</option>
-                                                                                        <option value="HQ" >HQ - Corporate Headquarters</option>
-                                                                                        <option value="MA">MA - Mailing</option>
-                                                                                        <option value="MG" >MG - Matching Gift Address</option>
-                                                                                        <option value="P1" >P1 - Parent 1</option>
-                                                                                        <option value="P2" >P2 - Parent 2</option>
-                                                                                        <option value="P3" >P3 - Parent 3</option>
-                                                                                        <option value="P4" >P4 - Parent 4</option>
-                                                                                        <option value="PA" >PA - Parents</option>
-                                                                                        <option value="PR" >PR - Permanent</option>
-                                                                                        <option value="RH" >RH - Residence Hall</option>
-                                                                                        <option value="SB" >SB - Corporate Subsidiary</option>
-                                                                                        <option value="SC" >SC - School Campus</option>
-                                                                                        <option value="SE" >SE - Seasonal</option>
-                                                                                        <option value="TE" >TE - Temporary</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Evening Phone Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <select class="col-sm-6" >
-                                                                                        <option value="" >--Select--</option>
-                                                                                        <option value="BI" >BI - Billing</option>
-                                                                                        <option value="BU" >BU - Business</option>
-                                                                                        <option value="EM" >EM - Emergency Contact</option>
-                                                                                        <option value="FA" >FA - Firm Address</option>
-                                                                                        <option value="HQ" >HQ - Corporate Headquarters</option>
-                                                                                        <option value="MA">MA - Mailing</option>
-                                                                                        <option value="MG" >MG - Matching Gift Address</option>
-                                                                                        <option value="P1" >P1 - Parent 1</option>
-                                                                                        <option value="P2" >P2 - Parent 2</option>
-                                                                                        <option value="P3" >P3 - Parent 3</option>
-                                                                                        <option value="P4" >P4 - Parent 4</option>
-                                                                                        <option value="PA" >PA - Parents</option>
-                                                                                        <option value="PR" >PR - Permanent</option>
-                                                                                        <option value="RH" >RH - Residence Hall</option>
-                                                                                        <option value="SB" >SB - Corporate Subsidiary</option>
-                                                                                        <option value="SC" >SC - School Campus</option>
-                                                                                        <option value="SE" >SE - Seasonal</option>
-                                                                                        <option value="TE" >TE - Temporary</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Mobile Phone Code</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <select class="col-sm-6" >
-                                                                                        <option value="" >--Select--</option>
-                                                                                        <option value="BI" >BI - Billing</option>
-                                                                                        <option value="BU" >BU - Business</option>
-                                                                                        <option value="EM" >EM - Emergency Contact</option>
-                                                                                        <option value="FA" >FA - Firm Address</option>
-                                                                                        <option value="HQ" >HQ - Corporate Headquarters</option>
-                                                                                        <option value="MA">MA - Mailing</option>
-                                                                                        <option value="MG" >MG - Matching Gift Address</option>
-                                                                                        <option value="P1" >P1 - Parent 1</option>
-                                                                                        <option value="P2" >P2 - Parent 2</option>
-                                                                                        <option value="P3" >P3 - Parent 3</option>
-                                                                                        <option value="P4" >P4 - Parent 4</option>
-                                                                                        <option value="PA" >PA - Parents</option>
-                                                                                        <option value="PR" >PR - Permanent</option>
-                                                                                        <option value="RH" >RH - Residence Hall</option>
-                                                                                        <option value="SB" >SB - Corporate Subsidiary</option>
-                                                                                        <option value="SC" >SC - School Campus</option>
-                                                                                        <option value="SE" >SE - Seasonal</option>
-                                                                                        <option value="TE" >TE - Temporary</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Enterprise URL</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <input class="col-sm-7" type="text">
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Payment Plan Completed URL</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <input class="col-sm-7" type="text">
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-
-                                                                        <form class="form-horizontal" role="form">
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-3">Payment Completed URL</label>
-                                                                                <div class="col-sm-9">
-                                                                                    <input class="col-sm-7" type="text">
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                        <br> <br>
-                                                                        <button type="submit" class="btn btn-info btn-sm">Save</button> &nbsp;&nbsp;
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <!-- end of Miscellaneous configuration -->
                                                         </div>
+
+                                                        <button type="submit" class="btn btn-info btn-sm">Save</button> &nbsp;&nbsp;
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                         <!-- End of Modal SAPC -->
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Miscellaneous/Departmental Deposit Payment Configuration(s)   -->
-
 
                             <div class="panel">
                                 <div class="panel-heading">
@@ -1268,19 +1022,7 @@
                                 </div>
                                 <div id="mdpc_body" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: gainsboro;">
-                                        <!-- <label><input type="radio" name="optradio"> &nbsp;
-                                             CASHIERING MISC TEMPLATE
-                                         </label> <br>
-
-                                         <label><input type="radio" name="optradio"> &nbsp;
-                                             CASHIERING_MISC
-                                         </label>  <br>
-
-                                         <label><input type="radio" name="optradio"> &nbsp;
-                                             MISC ACCOUNT
-                                         </label> -->
-
-                                        <h4> Select a configuration to edit or copy or proceed with add </h4>
+                                        <h5> Select a configuration to edit or copy or proceed with add </h5>
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead>
@@ -1318,10 +1060,11 @@
                                             </table>
                                         </div>
 
-                                        <button type="reset" class="btn btn-info btn-sm">Edit</button> &nbsp;&nbsp;
-                                        <button type="reset" class="btn btn-info btn-sm">Add</button> &nbsp;&nbsp;
-                                        <button type="reset" class="btn btn-info btn-sm">Copy</button> &nbsp;&nbsp;
-                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button> <br>
+                                        <button type="reset" class="btn btn-info btn-sm" id="misc_deposit_payment_edit">Edit</button> &nbsp;&nbsp;
+                                        <button type="reset" class="btn btn-info btn-sm" id="misc_deposit_payment_add">Add</button> &nbsp;&nbsp;
+                                        <button type="reset" class="btn btn-info btn-sm" id="misc_deposit_payment_copy">Copy</button> &nbsp;&nbsp;
+                                        <button type="reset" class="btn btn-danger btn-sm" id="misc_deposit_payment_reset">Reset</button> &nbsp;&nbsp;
+                                        <button type="submit" class="btn btn-danger btn-sm" id="misc_deposit_payment_delete">Delete</button> <br>
                                     </div>
                                 </div>
                             </div>
@@ -1581,10 +1324,10 @@
 
 
     <!-- Password management section -->
-<div class="container-fluid">
+<div class="parallax" id="pwd_mgmt_section">
     <div class="row" id="row_pwd" style="padding-left: 20px; ">
-        <h2 id="pwd_mgmt">Password Management</h2>
-        <p class="text-info"><h4>Change/Reset the credentials</h4> <br>
+        <h2 id="pwd_mgmt" style="color: white;">Password Management</h2>
+        <p class="text-info"><h4 style="color: white;">Change/Reset the credentials</h4> <br>
         <div class="col-md-5">
 
             <form role="form">

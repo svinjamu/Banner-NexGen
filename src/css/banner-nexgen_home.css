@@ -93,3 +93,22 @@ li.active a {
 .scroll{
     background-color: black;
 }
+
+#pwd_mgmt{
+    background: none;
+}
+
+#row_pwd {
+    background-image  : url('../img/passowrd.jpg');
+
+    /* Full height */
+    height: 60%;
+
+    /* Create the parallax scrolling effect */
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-blend-mode: color-dodge;*/
+}
